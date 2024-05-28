@@ -1,0 +1,12 @@
+2023-11-10T08:07:58+00:00 CRITICAL Uncaught TypeError: preg_match_all(): Argument #2 ($subject) must be of type string, stdClass given in C:\xampp\htdocs\wordpress\wp-content\themes\Divi\core\components\Portability.php:1671
+Stack trace:
+#0 C:\xampp\htdocs\wordpress\wp-content\themes\Divi\core\components\Portability.php(1671): preg_match_all('/(src|src__hove...', Object(stdClass), Array)
+#1 C:\xampp\htdocs\wordpress\wp-content\themes\Divi\core\components\Portability.php(404): ET_Core_Portability->get_data_images(Array)
+#2 C:\xampp\htdocs\wordpress\wp-content\themes\Divi\core\components\Portability.php(2656): ET_Core_Portability->export()
+#3 C:\xampp\htdocs\wordpress\wp-includes\class-wp-hook.php(324): et_core_portability_ajax_export('')
+#4 C:\xampp\htdocs\wordpress\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters('', Array)
+#5 C:\xampp\htdocs\wordpress\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#6 C:\xampp\htdocs\wordpress\wp-admin\admin-ajax.php(188): do_action('wp_ajax_et_core...')
+#7 {main}
+  thrown in C:\xampp\htdocs\wordpress\wp-content\themes\Divi\core\components\Portability.php on line 1671
+

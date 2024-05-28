@@ -1,0 +1,151 @@
+<?php
+
+add_ux_builder_shortcode( 'ux_table',
+	array(
+		'type'      => 'container',
+		'name'      => __( 'Table' ),
+		'category'  => __( 'UX Flat' ),
+        'thumbnail' =>  flatsome_uxf_builder_thumbnail( 'table' ),
+		'wrap'      => false,
+		'presets'   => array(
+			array(
+				'name'    => __( 'Default' ),
+				'content' => '[ux_table]<table><thead><tr><th>Month</th><th>Savings</th></tr></thead><tbody><tr><td>January</td><td>$100</td></tr><tr><td>February</td><td>$80</td></tr></tbody><tfoot><tr><td>Sum</td><td>$180</td></tr></tfoot></table>[/ux_table]',
+			),
+			array(
+				'name'    => __( 'thead Tag' ),
+				'content' => '[ux_table thead="true"]<table><thead><tr><th>Month</th><th>Savings</th></tr></thead><tbody><tr><td>January</td><td>$100</td></tr><tr><td>February</td><td>$80</td></tr></tbody><tfoot><tr><td>Sum</td><td>$180</td></tr></tfoot></table>[/ux_table]',
+			),
+			array(
+				'name'    => __( 'tfoot Tag' ),
+				'content' => '[ux_table tfoot="true"]<table><thead><tr><th>Month</th><th>Savings</th></tr></thead><tbody><tr><td>January</td><td>$100</td></tr><tr><td>February</td><td>$80</td></tr></tbody><tfoot><tr><td>Sum</td><td>$180</td></tr></tfoot></table>[/ux_table]',
+			),
+		),
+		'options'   => array(
+			'thead'  => array(
+				'type'    => 'checkbox',
+				'heading' => 'Header (thead)',
+				'default' => 'false',
+			),
+            'thead_bg_color' => array(
+                'conditions' => 'thead == "true"',
+                'type'     => 'colorpicker',
+                'heading'  => __( 'thead Bg Color' ),
+                'alpha'    => true,
+                'format'   => 'rgb',
+                'helpers'  => require( get_template_directory() . '/inc/builder/shortcodes/helpers/colors.php' ),
+            ),
+            'thead_text_color' => array(
+                'conditions' => 'thead == "true"',
+                'type'     => 'colorpicker',
+                'heading' => __('thead Text Color'),
+                'alpha'    => true,
+                'format'   => 'rgb',
+                'helpers'  => require( get_template_directory() . '/inc/builder/shortcodes/helpers/colors.php' ),
+            ),
+			'sticky'  => array(
+				'type'    => 'checkbox',
+				'heading' => 'Column First',
+				'default' => 'false',
+			),
+            'sticky_bg_color' => array(
+                'conditions' => 'sticky == "true"',
+                'type'     => 'colorpicker',
+                'heading'  => __( 'Column First Bg Color' ),
+                'alpha'    => true,
+                'format'   => 'rgb',
+                'helpers'  => require( get_template_directory() . '/inc/builder/shortcodes/helpers/colors.php' ),
+            ),
+            'sticky_text_color' => array(
+                'conditions' => 'sticky == "true"',
+                'type'     => 'colorpicker',
+                'heading' => __('Column First Text Color'),
+                'alpha'    => true,
+                'format'   => 'rgb',
+                'helpers'  => require( get_template_directory() . '/inc/builder/shortcodes/helpers/colors.php' ),
+            ),
+			'tfoot'  => array(
+				'type'    => 'checkbox',
+				'heading' => 'Footer (tfoot)',
+				'default' => 'false',
+			),
+            'tfoot_bg_color' => array(
+                'conditions' => 'tfoot == "true"',
+                'type'     => 'colorpicker',
+                'heading'  => __( 'tfoot Bg Color' ),
+                'alpha'    => true,
+                'format'   => 'rgb',
+                'helpers'  => require( get_template_directory() . '/inc/builder/shortcodes/helpers/colors.php' ),
+            ),
+            'tfoot_text_color' => array(
+                'conditions' => 'tfoot == "true"',
+                'type'     => 'colorpicker',
+                'heading' => __('tfoot Text Color'),
+                'alpha'    => true,
+                'format'   => 'rgb',
+                'helpers'  => require( get_template_directory() . '/inc/builder/shortcodes/helpers/colors.php' ),
+            ),
+    'text_options' => array(
+        'type' => 'group',
+            'heading' => __( 'Table Option' ),
+            'options' => array(
+				'letter_case' => array(
+                    'type' => 'radio-buttons',
+					'heading' => 'Letter Case',
+					'default' => '',
+					'options' => array(
+                        '' => array( 'title' => 'Normal'),
+                        'uppercase'   => array( 'title' => 'UPPERCASE'),
+					),
+				),
+				'text_padding' => array(
+					'type' => 'margins',
+					'heading' => 'Text Padding',
+					'full_width' => true,
+					'min' => 0,
+					'max' => 100,
+					'step' => 1,
+				),
+				'border_color' => array(
+                    'type' => 'colorpicker',
+                    'heading' => __('Border Color'),
+                    'format' => 'rgb',
+                    'helpers'  => require( get_template_directory() . '/inc/builder/shortcodes/helpers/colors.php' ),
+				),
+				'border_width' => array(
+					'type' => 'scrubfield',
+					'heading' => 'Border Width',
+					'default' => '1px',
+					'min' => 0,
+					'max' => 20,
+					'step' => 1,
+				),
+				'table_height' => array(
+					'type'    => 'scrubfield',
+					'heading' => __( 'Height' ),
+					'default' => '',
+					'min'     => 0,
+					'max'     => 1600,
+					'step'    => 5,
+				),
+				'table_width' => array(
+					'type'    => 'scrubfield',
+					'heading' => __( 'Min Width' ),
+					'default' => '',
+					'min'     => 0,
+					'max'     => 1600,
+					'step'    => 5,
+				),
+                'odd_bg_color' => array(
+                    'type'     => 'colorpicker',
+                    'heading'  => __( 'Odd Bg Color' ),
+                    'alpha'    => true,
+                    'format'   => 'rgb',
+                    'helpers'  => require( get_template_directory() . '/inc/builder/shortcodes/helpers/colors.php' ),
+                ),
+            ),
+        ),
+            'advanced_options' => require( get_template_directory() . '/inc/builder/shortcodes/commons/advanced.php'),
+		),
+	)
+);

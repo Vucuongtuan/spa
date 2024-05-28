@@ -1,0 +1,9 @@
+<div id="more_{{::$id}}" class="more has-dropdown {{ shortcode.options.class }}">
+    <details open>
+        <summary class="text-center" ng-style="{'color' : shortcode.options.color}">{{ shortcode.options.text }}<i class="icon-angle-down"></i></summary>
+        <content></content>
+    </details>
+</div>
+<style scope="scope">
+    #more_{{::$id}} summary {height:{{ shortcode.options.height }};margin-top:-{{ shortcode.options.height }};padding-top:70px;background-image: linear-gradient(180deg,hsla(0,0%,100%,0),{{ shortcode.options.bgcolor }});}
+</style>

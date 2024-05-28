@@ -1,0 +1,55 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: UX Flat\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-09-07 13:36+0000\n"
+"PO-Revision-Date: 2023-09-16 02:16+0000\n"
+"Last-Translator: \n"
+"Language-Team: Tiếng Việt\n"
+"Language: vi\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Loco-Version: 2.6.2; wp-6.1-alpha-53955\n"
+"X-Domain: uxflat"
+
+#. Author URI of the plugin
+msgid "https://profiles.wordpress.org/wpvncom/"
+msgstr ""
+
+#. URI of the plugin
+msgid "https://uxflat.com"
+msgstr ""
+
+#: inc/init.php:798
+msgid "Latest Posts"
+msgstr "Bài viết mới cập nhật"
+
+#: inc/init.php:789
+msgid "Related Posts by Category"
+msgstr "Bài viết cùng chuyên mục"
+
+#: inc/init.php:766
+msgid "Related Posts by Tags"
+msgstr "Bài viết cùng chủ đề"
+
+#. Description of the plugin
+msgid ""
+"This plugin will create new elements for Flatsome > v3.16 <code>Flatsome / "
+"Advanced / UX Flat</code>"
+msgstr ""
+
+#. Author of the plugin
+msgid "Tien COP"
+msgstr "Tiến CỌP"
+
+#. Name of the plugin
+msgid "UX Flat"
+msgstr ""
+
+#: uxflat.php:24
+msgid ""
+"Warning: Please install the \"Flatsome\" parent theme or deactive UX Flat"
+msgstr ""
